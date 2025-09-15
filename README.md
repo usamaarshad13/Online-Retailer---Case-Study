@@ -84,7 +84,7 @@ FROM consumer
 GROUP BY loyalty_status;
 ```
 
-![Count of Loyalty Status](images/Count_loyalStatus.png)
+![Count of Loyalty Status](images/Count_LoyalStatus.png)
 
 
 **Answer:**
