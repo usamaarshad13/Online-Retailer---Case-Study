@@ -182,13 +182,13 @@ WHERE consumer_id = (
 - Female-dominant customer base (76.4%) with concentrated age range (30-32 years) suggests focused targeting opportunities
 - Progressive age-loyalty correlation indicates older customers (30+) drive higher lifetime value
 
-## Campaign Performance
+### Campaign Performance
 
 - Email marketing delivers exceptional ROI with 91% higher spending among engaged users ($240.83 vs $126.12)
 - Pop-up campaigns create negative value, reducing average spend by 5% and cannibalizing higher-value purchases
 - Pop-up exposure is necessary for discount adoption (33% save rate), but overall campaign impact is negative
 
-## Customer Segmentation
+### Customer Segmentation
 
 - Email engagement strongly predicts high-value behavior, with top spenders actively engaging with campaigns
 - Loyalty tier distribution shows healthy program penetration with tier 2 representing largest segment (29%)
