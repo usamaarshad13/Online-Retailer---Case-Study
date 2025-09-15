@@ -97,7 +97,7 @@ Tier 2 leads with 2,612 customers (29% of base). Age increases with loyalty: Tie
 ### Q7. Pop-up message impact on discount code adoption
 
 ```sql
-SELECT COUNT(*) AS consumer_count, pop_up AS pop_up, saved_discount AS         discount_code
+SELECT COUNT(*) AS consumer_count, pop_up AS pop_up, saved_discount AS discount_code
 FROM pop_up
 GROUP BY pop_up, saved_discount;
 ```
