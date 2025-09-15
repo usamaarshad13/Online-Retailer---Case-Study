@@ -23,6 +23,7 @@ LIMIT 5;
 ```
 
 ![Consumer Head](images/consumer_head.png)
+
 This output validates the consumer table's schema and confirms presence of key demographic columns (consumer_id, gender, age, and loyalty_status). Verifying schema upfront prevents join and aggregation errors later.
 
 ## Pop Up Table
@@ -83,7 +84,7 @@ FROM consumer
 GROUP BY loyalty_status;
 ```
 
-![Count of Loyalty Status](images/Count_loyalStatus.png)
+![Count of Loyalty Status](images/Count_LoyalStatus.png)
 
 Tier 2 leads with 2,612 customers (29% of base). Age increases with loyalty: Tier 0 (29 years) to Tier 4 (34 years), indicating older customers have higher brand loyalty. Target retention efforts at 30+ demographic while focusing acquisition on younger segments.
 
