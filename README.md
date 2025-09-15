@@ -73,7 +73,6 @@ GROUP BY gender;
 
 ![Gender with Avg Age](images/gender_age.png)
 
-**Answer:**
 Customer base is 76.4% female (6,903) vs 23.6% male (2,129) with similar average ages: females 31 years, males 32 years. Marketing should prioritize female-focused messaging with age-neutral content targeting the low 30s year demographic.
 
 ### Q6. Loyalty status distribution and average age
@@ -84,10 +83,8 @@ FROM consumer
 GROUP BY loyalty_status;
 ```
 
-![Count of Loyalty Status](images/Count_LoyalStatus.png)
+![Count of Loyalty Status](images/Count_loyalStatus.png)
 
-
-**Answer:**
 Tier 2 leads with 2,612 customers (29% of base). Age increases with loyalty: Tier 0 (29 years) to Tier 4 (34 years), indicating older customers have higher brand loyalty. Target retention efforts at 30+ demographic while focusing acquisition on younger segments.
 
 
@@ -97,14 +94,13 @@ Tier 2 leads with 2,612 customers (29% of base). Age increases with loyalty: Tie
 ### Q7. Pop-up message impact on discount code adoption
 
 ```sql
-SELECT COUNT(*) AS consumer_count, pop_up AS pop_up, saved_discount AS discount_code
+SELECT COUNT(*) AS consumer_count, pop_up AS pop_up, saved_discount AS         discount_code
 FROM pop_up
 GROUP BY pop_up, saved_discount;
 ```
 
 ![Popup Counts](images/popup_counts.png)
 
-**Answer:**
 Among consumers who received pop-ups, 1,487 saved discount codes compared to 0 who saved codes without receiving pop-ups. Pop-up recipients showed a 33% discount adoption rate (1,487 out of 4,516), while non-recipients had 0% adoption, demonstrating pop-ups effectively drive discount engagement.
 
 ### Q8. Pop-up campaign effectiveness analysis
@@ -120,7 +116,6 @@ GROUP BY pop_up;
 
 ![Pop Up Effect](images/popup_effect.png)
 
-**Answer:**
 Pop-up campaigns show negative ROI. No pop-up group: $626,325 total sales, $138.69 average. Pop-up group: $594,930 total sales, $131.74 average. Pop-ups reduced spending by $6.95 per customer (-5.0%), suggesting discount offers cannibalized higher-value purchases.
 
 ### Q9. Email campaign effectiveness analysis
@@ -136,7 +131,7 @@ GROUP BY e.opened_email;
 
 ![Email Effect](images/email_effect.png)
 
-**Answer:** Email campaigns show exceptional ROI. Non-openers: $1,048,822 total, $126.12 average. Email openers: $172,432 total, $240.83 average. Opening emails drives 91% increase in spending (+$114.71), indicating strong targeting effectiveness and high purchase intent among engaged users.
+Email campaigns show exceptional ROI. Non-openers: $1,048,822 total, $126.12 average. Email openers: $172,432 total, $240.83 average. Opening emails drives 91% increase in spending (+$114.71), indicating strong targeting effectiveness and high purchase intent among engaged users.
 
 
 ## 4 — Nested Queries / Edge Cases
@@ -156,7 +151,7 @@ WHERE consumer_id = (
 
 ![Lowest Spender](images/min_spender_popup.png)
 
-**Answer:** Lowest spender (ID: 5887286353) did not receive pop-ups (pop_up = 0), suggesting effective targeting that excludes low-value segments or indicates pop-ups don't reach price-sensitive customers.
+Lowest spender (ID: 5887286353) did not receive pop-ups (pop_up = 0), suggesting effective targeting that excludes low-value segments or indicates pop-ups don't reach price-sensitive customers.
 
 
 ### Q11. Did the highest spender open the email?
@@ -174,7 +169,7 @@ WHERE consumer_id = (
 
 ![Highest Spender](images/HighestSpender.png)
 
-**Answer:** Highest spender (ID: 5955534353) opened emails (opened_email = 1), validating the strong correlation between email engagement and high purchase values. Supports prioritizing email marketing for top customer retention.
+Highest spender (ID: 5955534353) opened emails (opened_email = 1), validating the strong correlation between email engagement and high purchase values. Supports prioritizing email marketing for top customer retention.
 
 ## 5 — Key Business Insights
 ### Customer Demographics
@@ -182,13 +177,13 @@ WHERE consumer_id = (
 - Female-dominant customer base (76.4%) with concentrated age range (30-32 years) suggests focused targeting opportunities
 - Progressive age-loyalty correlation indicates older customers (30+) drive higher lifetime value
 
-### Campaign Performance
+## Campaign Performance
 
 - Email marketing delivers exceptional ROI with 91% higher spending among engaged users ($240.83 vs $126.12)
 - Pop-up campaigns create negative value, reducing average spend by 5% and cannibalizing higher-value purchases
 - Pop-up exposure is necessary for discount adoption (33% save rate), but overall campaign impact is negative
 
-### Customer Segmentation
+## Customer Segmentation
 
 - Email engagement strongly predicts high-value behavior, with top spenders actively engaging with campaigns
 - Loyalty tier distribution shows healthy program penetration with tier 2 representing largest segment (29%)
